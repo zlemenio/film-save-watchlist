@@ -1,0 +1,318 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
+
+.header {
+    color: whitesmoke;
+    background: url("/static/img/damn.jpg");
+    height: 208px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    display: grid;
+    place-content: center;
+}
+
+
+/* Head content */
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.head-content {
+    min-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    place-content: center;
+}
+
+.title {
+    align-self: center;
+    font-size: 42.7px;
+    text-shadow: 3px 1.5px 20px black;
+    margin-right: 50px;
+}
+
+.subtitle {
+    text-shadow: 3px 1.5px 20px black;
+    margin-left: 50px;
+    align-self: center;
+    font-weight: 700;
+}
+/* Head content*/
+
+
+/* Search bar */        
+.searchBar {
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: "search btn";
+    place-content: center;
+}
+
+.search {
+    grid-area: search;
+    display: grid;
+    grid-template-columns: 0px 20px 8px 0.9fr;
+    justify-content: flex-start;
+    border-radius: 6px 0px 0px 6px;
+    background: white;
+    border: 1px solid #D1D5DB;
+    border-right: none;
+    box-sizing: border-box;
+    width: 342px;
+    height: 38px;
+    place-content: center;
+}
+
+.searchIcon {
+    height: 20px;
+}
+
+.searchIcon {
+    grid-area: icon;
+    grid-column: 2/3;
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#searchMovie {
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    border: none;
+    grid-area: input;
+    grid-column: 4/5;    
+}
+
+#searchMovie:focus {
+    outline: none;
+}
+
+#searchBtn {
+    color: #374151;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    height: 38px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 0px 5px 5px 0px;
+    grid-area: btn;   
+}
+
+#searchBtn:disabled {
+    cursor: not-allowed;
+}
+
+#searchBtn:focus {
+    outline: none;
+}
+#searchBtn:active {
+    background: #D1D5DB;
+}
+/* Search bar */        
+
+
+
+/* default search content */
+
+#default-search-interface {
+    display: grid;
+    place-content: center;
+    height: 70vh;
+}
+
+#default-searchList {
+    display: flex;
+    flex-direction: column;
+    gap: 8.75px;
+}
+
+.default-searchWait-icon {
+    display: block;
+    margin: 0px;
+    width: 70px;
+    height: 100%;
+    opacity: 30%;
+    align-self: center;
+}
+
+.default-searchWait-title {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 18px;
+    opacity: 30%;
+}
+
+/* default search content */
+
+
+
+
+/* Film section */
+.film-item {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    min-width: 560px;
+    max-width: 600px;
+    
+    /* border: 1px solid tomato; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20.59px;
+    padding-top: 20.59px;
+    border-bottom: 1.5px solid #E5E7EB;
+}
+
+.show {
+    cursor: pointer;
+}
+
+
+.featured-img {
+    align-self: center;
+    height: 147.71px;
+    width: 99px;
+    border-radius: 2.33px;
+    /* border: 1px solid yellow; */
+}
+
+.film-content {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid yellow; */
+
+}
+
+
+
+
+
+/* Film name - how many stars */
+.film-title {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid tomato; */
+    align-items: center;
+}
+
+#title {
+    font-size: 16px;
+    align-self:center;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+
+#rate {
+    align-self: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.star-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    margin-left: 4px;
+}
+
+.star-icon, .add-btn {
+    height: 16px;
+    width: 16px;
+}
+
+/* Film name - how many stars */
+
+
+
+
+/* All the info film details 
+* runtime
+* genre 
+* add 2 watch later
+*/
+.film-details {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    margin-top: 11px;
+    margin-bottom: 8px;
+    height: 20px;
+}
+
+#run-time, #genre, .sub-watch-later {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.sub-watch-later {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#genre {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#run-time {
+    margin-top: auto;
+    margin-bottom: auto;
+
+    margin-right: 19px;
+    display: block;
+    font-size: 12px;
+}
+
+.adding-watch-list {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.add-btn {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2px;
+
+}
+
+
+/* Film desc */
+#film-desc {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    line-height: 1.3rem;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    /* border: 1px solid yellow; */
+}
